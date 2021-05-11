@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"can-test\startup_stm32f103xb.o"
+"can-test\main.o"
+"can-test\stm32f1xx_it.o"
+"can-test\stm32f1xx_hal_msp.o"
+"can-test\stm32f1xx_hal_gpio_ex.o"
+"can-test\stm32f1xx_hal_tim.o"
+"can-test\stm32f1xx_hal_tim_ex.o"
+"can-test\stm32f1xx_hal.o"
+"can-test\stm32f1xx_hal_rcc.o"
+"can-test\stm32f1xx_hal_rcc_ex.o"
+"can-test\stm32f1xx_hal_gpio.o"
+"can-test\stm32f1xx_hal_dma.o"
+"can-test\stm32f1xx_hal_cortex.o"
+"can-test\stm32f1xx_hal_pwr.o"
+"can-test\stm32f1xx_hal_flash.o"
+"can-test\stm32f1xx_hal_flash_ex.o"
+"can-test\stm32f1xx_hal_exti.o"
+"can-test\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "can-test\can-test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "can-test.map" -o can-test\can-test.axf
